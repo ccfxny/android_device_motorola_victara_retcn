@@ -351,6 +351,7 @@ bin/netmgrd
 bin/qcks
 bin/qmi_motext_hook
 bin/qmuxd
+bin/radish
 bin/rild:bin/rild.mmi
 bin/rfs_access
 bin/rmt_storage
@@ -395,3 +396,7 @@ app/TimeService/TimeService.apk
 
 # Touch frimware
 etc/firmware/atmel-a432-14102902-0103aa-victara.tdat
+
+#others
+bin/ebtables
+etc/ethertypes
