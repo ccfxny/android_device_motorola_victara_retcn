@@ -1,0 +1,3 @@
+add_lunch_combo cm_victara_retcn-user
+add_lunch_combo cm_victara_retcn-userdebug
+add_lunch_combo cm_victara_retcn-eng
