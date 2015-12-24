@@ -12,6 +12,8 @@
 
 # ADSP
 bin/adspd
+vendor/lib/libscve.so
+vendor/lib/libscve_stub.so
 
 # Audio
 bin/adsprpcd
@@ -62,6 +64,7 @@ bin/hvdcp
 bin/btnvtool
 bin/hci_qcomm_init
 vendor/lib/libbtnv.so
+vendor/lib/libbt-vendor.so
 
 # Camera
 bin/mm-qcamera-daemon
@@ -86,6 +89,8 @@ lib/libmot_sensorlistener.so
 lib/libmot-qc-fd-offline.so
 lib/libmotocalibration.so
 lib/libqomx_core.so
+vendor/lib/libimscamera_jni.so
+vendor/lib/lib-imscamera.so
 vendor/lib/libadsprpc.so
 vendor/lib/libC2D2.so
 vendor/lib/libfastcvadsp_stub.so
@@ -114,6 +119,7 @@ vendor/lib/libmmcamera_mt9m114.so
 vendor/lib/libmmcamera_mt9v113.so
 vendor/lib/libmmcamera_ov10820.so
 vendor/lib/libmmcamera_s5k5e2.so
+vendor/lib/libmmcamera_t4k71.so
 vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_tuning.so
@@ -125,6 +131,9 @@ vendor/lib/liboemcamera.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libthermalclient.so
+vendor/lib/libjpegdhw.so
+vendor/lib/libjpegehw.so
+
 
 # Chromatix
 lib/libchromatix_ar0543_common.so
@@ -159,6 +168,13 @@ vendor/lib/libchromatix_s5k5e2_hfr_60fps.so
 vendor/lib/libchromatix_s5k5e2_liveshot.so
 vendor/lib/libchromatix_s5k5e2_preview.so
 vendor/lib/libchromatix_s5k5e2_snapshot.so
+vendor/lib/libchromatix_t4k71_common.so
+vendor/lib/libchromatix_t4k71_fhd_30fps.so
+vendor/lib/libchromatix_t4k71_fhd_30fps_video.so
+vendor/lib/libchromatix_t4k71_fhd_60fps.so
+vendor/lib/libchromatix_t4k71_hd_30fps.so
+vendor/lib/libchromatix_t4k71_hd_60fps.so
+
 
 # CPU
 bin/mpdecision
@@ -186,11 +202,16 @@ vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/librpmb.so
+vendor/lib/libssd.so
+
+# Listen service
+vendor/lib/liblistensoundmodel.so
 
 # GPS
--app/com.qualcomm.location/com.qualcomm.location.apk
--app/com.qualcomm.services.location/com.qualcomm.services.location.apk
--app/MotGeoFenceSvc/MotGeoFenceSvc.apk
+app/com.qualcomm.location/com.qualcomm.location.apk
+app/com.qualcomm.services.location/com.qualcomm.services.location.apk
+app/MotGeoFenceSvc/MotGeoFenceSvc.apk
 bin/gpsone_daemon
 etc/permissions/com.qualcomm.location.xml
 etc/gps.conf
@@ -199,6 +220,7 @@ etc/quipc.conf
 etc/sap.conf
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
+vendor/lib/liblowi_client.so
 vendor/lib/libalarmservice_jni.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
@@ -207,6 +229,17 @@ vendor/lib/libloc_ext.so
 vendor/lib/liblocationservice.so
 vendor/lib/libquipc_os_api.so
 vendor/lib/libulp2.so
+vendor/lib/libquipc_ulp_adapter.so
+
+#wifi
+bin/xtwifi-client
+etc/xtwifi.conf
+bin/xtwifi-inet-agent
+vendor/lib/libwifiscanner.so
+vendor/lib/libxtadapter.so
+vendor/lib/libxtwifi_ulp_adaptor.so
+vendor/lib/libxtwifi_zpp_adaptor.so
+
 
 # Graphics
 vendor/lib/egl/eglsubAndroid.so
@@ -218,6 +251,7 @@ vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30-a3xx.so
+vendor/lib/libc2d30-a4xx.so
 vendor/lib/libCB.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-qcom.so
@@ -263,6 +297,9 @@ vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxWmaDec.so
+vendor/lib/libHevcSwDecoder.so
+vendor/lib/libSHIMDivxDrm.so
+
 
 # Media firmware
 etc/firmware/venus.b00
@@ -314,6 +351,7 @@ bin/netmgrd
 bin/qcks
 bin/qmi_motext_hook
 bin/qmuxd
+bin/radish
 bin/rild:bin/rild.mmi
 bin/rfs_access
 bin/rmt_storage
@@ -324,8 +362,12 @@ lib/libmdmdetect.so
 lib/libmotext_inf.so
 lib/libqmimotext.so
 lib/libril.so
+vendor/lib/libNimsWrap.so
 vendor/lib/libconfigdb.so
 vendor/lib/libcneapiclient.so
+vendor/lib/libcneconn.so
+vendor/lib/libcneqmiutils.so
+vendor/lib/libcneutils.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libnetmgr.so
 vendor/lib/libril-qc-qmi-1.so
@@ -336,6 +378,7 @@ vendor/lib/libxml.so
 
 # Sensors
 bin/stm401
+etc/sensor_def_qcomdev.conf
 etc/firmware/cy8c20247_24lkxi.hex
 etc/firmware/sensorhubfw.bin
 etc/firmware/sensorhubfw_p0.bin
@@ -343,9 +386,17 @@ etc/firmware/sensorhubver_p0.txt
 etc/firmware/sensorhubver.txt
 lib/hw/sensorhub.msm8974.so
 lib/hw/sensors.msm8974.so
+vendor/lib/libppl.so
 
 # Time
 bin/time_daemon
+vendor/lib/libTimeService.so
+app/TimeService/TimeService.apk
+
 
 # Touch frimware
 etc/firmware/atmel-a432-14102902-0103aa-victara.tdat
+
+#others
+bin/ebtables
+etc/ethertypes
